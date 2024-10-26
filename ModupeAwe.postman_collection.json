@@ -1,0 +1,1760 @@
+{
+	"info": {
+		"_postman_id": "cb61ddef-96c4-4a96-90e1-32b97ee745a7",
+		"name": "ModupeAwe",
+		"description": "This is an open and free to use API for developers to test their client projects.\n        All api calls require you to pass in <br> your API Key with the querystring\n        <b>?apikey=########-####-####-####-############</b>, <br><br>Please\n        register for your own API Key today at https://todoapi.net/register ",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "39244154"
+	},
+	"item": [
+		{
+			"name": "api",
+			"item": [
+				{
+					"name": "todos",
+					"item": [
+						{
+							"name": "{id}",
+							"item": [
+								{
+									"name": "Retrieve specific todo",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/todos/:id?apikey=<string>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"todos",
+												":id"
+											],
+											"query": [
+												{
+													"key": "apikey",
+													"value": "<string>",
+													"description": "(Required) all api calls require the ?apikey querystring."
+												}
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<number>",
+													"description": "(Required) The id of the todo you wish to retrieve"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "A todo",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/todos/:id?apikey=<string>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"todos",
+														":id"
+													],
+													"query": [
+														{
+															"key": "apikey",
+															"value": "<string>",
+															"description": "(Required) all api calls require the ?apikey querystring."
+														}
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "Create a new Todo",
+									"request": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"description\": \"<string>\",\n  \"completed\": \"<boolean>\",\n  \"meta\": {}\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/todos/:id?apikey=<string>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"todos",
+												":id"
+											],
+											"query": [
+												{
+													"key": "apikey",
+													"value": "<string>",
+													"description": "(Required) all api calls require the ?apikey querystring."
+												}
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<number>",
+													"description": "(Required) Todo ID"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Todo updated successfully",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"description\": \"<string>\",\n  \"completed\": \"<boolean>\",\n  \"meta\": {}\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/todos/:id?apikey=<string>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"todos",
+														":id"
+													],
+													"query": [
+														{
+															"key": "apikey",
+															"value": "<string>",
+															"description": "(Required) all api calls require the ?apikey querystring."
+														}
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"id\": \"<integer>\",\n  \"description\": \"<string>\",\n  \"completed\": \"<boolean>\",\n  \"meta\": {}\n}"
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "Retrieve all todos",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/todos?apikey=<string>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"todos"
+									],
+									"query": [
+										{
+											"key": "apikey",
+											"value": "<string>",
+											"description": "(Required) all api calls require the ?apikey querystring."
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "A collection of todos",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/todos?apikey=<string>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"todos"
+											],
+											"query": [
+												{
+													"key": "apikey",
+													"value": "<string>",
+													"description": "(Required) all api calls require the ?apikey querystring."
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Create a new Todo.  There's a limit of 100 generic todos per developer account.",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"description\": \"<string>\",\n  \"completed\": \"<boolean>\",\n  \"meta\": {}\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/todos?apikey=<string>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"todos"
+									],
+									"query": [
+										{
+											"key": "apikey",
+											"value": "<string>",
+											"description": "(Required) all api calls require the ?apikey querystring."
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Todo created successfully",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"description\": \"<string>\",\n  \"completed\": \"<boolean>\",\n  \"meta\": {}\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/todos?apikey=<string>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"todos"
+											],
+											"query": [
+												{
+													"key": "apikey",
+													"value": "<string>",
+													"description": "(Required) all api calls require the ?apikey querystring."
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"id\": \"<integer>\",\n  \"description\": \"<string>\",\n  \"completed\": \"<boolean>\",\n  \"meta\": {}\n}"
+								}
+							]
+						},
+						{
+							"name": "Deletes all Todos",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/todos/?apikey=<string>&completed=<boolean>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"todos",
+										""
+									],
+									"query": [
+										{
+											"key": "apikey",
+											"value": "<string>",
+											"description": "(Required) all api calls require the ?apikey querystring."
+										},
+										{
+											"key": "completed",
+											"value": "<boolean>",
+											"description": "?completed=true if you want to delete only completed"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Returns message of outcome",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/todos/?apikey=<string>&completed=<boolean>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"todos",
+												""
+											],
+											"query": [
+												{
+													"key": "apikey",
+													"value": "<string>",
+													"description": "(Required) all api calls require the ?apikey querystring."
+												},
+												{
+													"key": "completed",
+													"value": "<boolean>",
+													"description": "?completed=true if you want to delete only completed"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "users",
+					"item": [
+						{
+							"name": "{user_id}",
+							"item": [
+								{
+									"name": "todos",
+									"item": [
+										{
+											"name": "{id}",
+											"item": [
+												{
+													"name": "Retrieve specific todo for current user",
+													"request": {
+														"auth": {
+															"type": "bearer",
+															"bearer": [
+																{
+																	"key": "token",
+																	"value": "{{bearerToken}}",
+																	"type": "string"
+																}
+															]
+														},
+														"method": "GET",
+														"header": [],
+														"url": {
+															"raw": "{{baseUrl}}/api/users/:user_id/todos/:id?apikey=<string>",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"users",
+																":user_id",
+																"todos",
+																":id"
+															],
+															"query": [
+																{
+																	"key": "apikey",
+																	"value": "<string>",
+																	"description": "(Required) all api calls require the ?apikey querystring."
+																}
+															],
+															"variable": [
+																{
+																	"key": "user_id",
+																	"value": "<number>",
+																	"description": "(Required) User Id"
+																},
+																{
+																	"key": "id",
+																	"value": "<number>",
+																	"description": "(Required) Todo Id"
+																}
+															]
+														}
+													},
+													"response": [
+														{
+															"name": "A todo belonging to current user",
+															"originalRequest": {
+																"method": "GET",
+																"header": [
+																	{
+																		"key": "Authorization",
+																		"value": "Bearer <token>",
+																		"description": "Added as a part of security scheme: bearer"
+																	}
+																],
+																"url": {
+																	"raw": "{{baseUrl}}/api/users/:user_id/todos/:id?apikey=<string>",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"api",
+																		"users",
+																		":user_id",
+																		"todos",
+																		":id"
+																	],
+																	"query": [
+																		{
+																			"key": "apikey",
+																			"value": "<string>",
+																			"description": "(Required) all api calls require the ?apikey querystring."
+																		}
+																	],
+																	"variable": [
+																		{
+																			"key": "user_id"
+																		},
+																		{
+																			"key": "id"
+																		}
+																	]
+																}
+															},
+															"status": "OK",
+															"code": 200,
+															"_postman_previewlanguage": "text",
+															"header": [],
+															"cookie": [],
+															"body": ""
+														}
+													]
+												},
+												{
+													"name": "Create a new Todo for the current user",
+													"request": {
+														"auth": {
+															"type": "bearer",
+															"bearer": [
+																{
+																	"key": "token",
+																	"value": "{{bearerToken}}",
+																	"type": "string"
+																}
+															]
+														},
+														"method": "PUT",
+														"header": [
+															{
+																"key": "Content-Type",
+																"value": "application/json"
+															},
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"body": {
+															"mode": "raw",
+															"raw": "{\n  \"description\": \"<string>\",\n  \"completed\": \"<boolean>\"\n}",
+															"options": {
+																"raw": {
+																	"headerFamily": "json",
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/api/users/:user_id/todos/:id?apikey=<string>",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"users",
+																":user_id",
+																"todos",
+																":id"
+															],
+															"query": [
+																{
+																	"key": "apikey",
+																	"value": "<string>",
+																	"description": "(Required) all api calls require the ?apikey querystring."
+																}
+															],
+															"variable": [
+																{
+																	"key": "user_id",
+																	"value": "<number>",
+																	"description": "(Required) User Id"
+																},
+																{
+																	"key": "id",
+																	"value": "<number>",
+																	"description": "(Required) Todo ID"
+																}
+															]
+														}
+													},
+													"response": [
+														{
+															"name": "Todo updated successfully",
+															"originalRequest": {
+																"method": "PUT",
+																"header": [
+																	{
+																		"key": "Content-Type",
+																		"value": "application/json"
+																	},
+																	{
+																		"key": "Accept",
+																		"value": "application/json"
+																	},
+																	{
+																		"key": "Authorization",
+																		"value": "Bearer <token>",
+																		"description": "Added as a part of security scheme: bearer"
+																	}
+																],
+																"body": {
+																	"mode": "raw",
+																	"raw": "{\n  \"description\": \"<string>\",\n  \"completed\": \"<boolean>\"\n}",
+																	"options": {
+																		"raw": {
+																			"headerFamily": "json",
+																			"language": "json"
+																		}
+																	}
+																},
+																"url": {
+																	"raw": "{{baseUrl}}/api/users/:user_id/todos/:id?apikey=<string>",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"api",
+																		"users",
+																		":user_id",
+																		"todos",
+																		":id"
+																	],
+																	"query": [
+																		{
+																			"key": "apikey",
+																			"value": "<string>",
+																			"description": "(Required) all api calls require the ?apikey querystring."
+																		}
+																	],
+																	"variable": [
+																		{
+																			"key": "user_id"
+																		},
+																		{
+																			"key": "id"
+																		}
+																	]
+																}
+															},
+															"status": "OK",
+															"code": 200,
+															"_postman_previewlanguage": "json",
+															"header": [
+																{
+																	"key": "Content-Type",
+																	"value": "application/json"
+																}
+															],
+															"cookie": [],
+															"body": "{\n  \"id\": \"<integer>\",\n  \"description\": \"<string>\",\n  \"completed\": \"<boolean>\"\n}"
+														}
+													]
+												}
+											]
+										},
+										{
+											"name": "Retrieve all todos",
+											"request": {
+												"auth": {
+													"type": "bearer",
+													"bearer": [
+														{
+															"key": "token",
+															"value": "{{bearerToken}}",
+															"type": "string"
+														}
+													]
+												},
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/users/:user_id/todos?apikey=<string>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"users",
+														":user_id",
+														"todos"
+													],
+													"query": [
+														{
+															"key": "apikey",
+															"value": "<string>",
+															"description": "(Required) A collection of todos for current user"
+														}
+													],
+													"variable": [
+														{
+															"key": "user_id",
+															"value": "<number>",
+															"description": "(Required) User Id"
+														}
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "Collection of todos",
+													"originalRequest": {
+														"method": "GET",
+														"header": [
+															{
+																"key": "Authorization",
+																"value": "Bearer <token>",
+																"description": "Added as a part of security scheme: bearer"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/users/:user_id/todos?apikey=<string>",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"users",
+																":user_id",
+																"todos"
+															],
+															"query": [
+																{
+																	"key": "apikey",
+																	"value": "<string>",
+																	"description": "(Required) A collection of todos for current user"
+																}
+															],
+															"variable": [
+																{
+																	"key": "user_id"
+																}
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "text",
+													"header": [],
+													"cookie": [],
+													"body": ""
+												}
+											]
+										},
+										{
+											"name": "Create a new Todo for current user.  There's a limit of 25 todos per user .",
+											"request": {
+												"auth": {
+													"type": "bearer",
+													"bearer": [
+														{
+															"key": "token",
+															"value": "{{bearerToken}}",
+															"type": "string"
+														}
+													]
+												},
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"description\": \"<string>\",\n  \"completed\": \"<boolean>\",\n  \"meta\": {}\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/users/:user_id/todos?apikey=<string>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"users",
+														":user_id",
+														"todos"
+													],
+													"query": [
+														{
+															"key": "apikey",
+															"value": "<string>",
+															"description": "(Required) all api calls require the ?apikey querystring."
+														}
+													],
+													"variable": [
+														{
+															"key": "user_id",
+															"value": "<number>",
+															"description": "(Required) User Id"
+														}
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "Todo created successfully",
+													"originalRequest": {
+														"method": "POST",
+														"header": [
+															{
+																"key": "Content-Type",
+																"value": "application/json"
+															},
+															{
+																"key": "Accept",
+																"value": "application/json"
+															},
+															{
+																"key": "Authorization",
+																"value": "Bearer <token>",
+																"description": "Added as a part of security scheme: bearer"
+															}
+														],
+														"body": {
+															"mode": "raw",
+															"raw": "{\n  \"description\": \"<string>\",\n  \"completed\": \"<boolean>\",\n  \"meta\": {}\n}",
+															"options": {
+																"raw": {
+																	"headerFamily": "json",
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/api/users/:user_id/todos?apikey=<string>",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"users",
+																":user_id",
+																"todos"
+															],
+															"query": [
+																{
+																	"key": "apikey",
+																	"value": "<string>",
+																	"description": "(Required) all api calls require the ?apikey querystring."
+																}
+															],
+															"variable": [
+																{
+																	"key": "user_id"
+																}
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"id\": \"<integer>\",\n  \"description\": \"<string>\",\n  \"completed\": \"<boolean>\",\n  \"meta\": {}\n}"
+												}
+											]
+										},
+										{
+											"name": "Deletes all Todos for the current user.",
+											"request": {
+												"auth": {
+													"type": "bearer",
+													"bearer": [
+														{
+															"key": "token",
+															"value": "{{bearerToken}}",
+															"type": "string"
+														}
+													]
+												},
+												"method": "DELETE",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/users/:user_id/todos/?apikey=<string>&completed=<boolean>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"users",
+														":user_id",
+														"todos",
+														""
+													],
+													"query": [
+														{
+															"key": "apikey",
+															"value": "<string>",
+															"description": "(Required) all api calls require the ?apikey querystring."
+														},
+														{
+															"key": "completed",
+															"value": "<boolean>",
+															"description": "?completed=true if you want to delete only completed"
+														}
+													],
+													"variable": [
+														{
+															"key": "user_id",
+															"value": "<number>",
+															"description": "(Required) User Id"
+														}
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "Returns message of outcome",
+													"originalRequest": {
+														"method": "DELETE",
+														"header": [
+															{
+																"key": "Authorization",
+																"value": "Bearer <token>",
+																"description": "Added as a part of security scheme: bearer"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/users/:user_id/todos/?apikey=<string>&completed=<boolean>",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"users",
+																":user_id",
+																"todos",
+																""
+															],
+															"query": [
+																{
+																	"key": "apikey",
+																	"value": "<string>",
+																	"description": "(Required) all api calls require the ?apikey querystring."
+																},
+																{
+																	"key": "completed",
+																	"value": "<boolean>",
+																	"description": "?completed=true if you want to delete only completed"
+																}
+															],
+															"variable": [
+																{
+																	"key": "user_id"
+																}
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "text",
+													"header": [],
+													"cookie": [],
+													"body": ""
+												}
+											]
+										}
+									]
+								},
+								{
+									"name": "todo",
+									"item": [
+										{
+											"name": "{id}",
+											"item": [
+												{
+													"name": "Deletes the todo, must belong to current user.",
+													"request": {
+														"auth": {
+															"type": "bearer",
+															"bearer": [
+																{
+																	"key": "token",
+																	"value": "{{bearerToken}}",
+																	"type": "string"
+																}
+															]
+														},
+														"method": "DELETE",
+														"header": [],
+														"url": {
+															"raw": "{{baseUrl}}/api/users/:user_id/todo/:id?apikey=<string>",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"users",
+																":user_id",
+																"todo",
+																":id"
+															],
+															"query": [
+																{
+																	"key": "apikey",
+																	"value": "<string>",
+																	"description": "(Required) all api calls require the ?apikey querystring."
+																}
+															],
+															"variable": [
+																{
+																	"key": "user_id",
+																	"value": "<number>",
+																	"description": "(Required) User Id"
+																},
+																{
+																	"key": "id",
+																	"value": "<number>",
+																	"description": "(Required) Todo ID"
+																}
+															]
+														}
+													},
+													"response": [
+														{
+															"name": "Returns a message",
+															"originalRequest": {
+																"method": "DELETE",
+																"header": [
+																	{
+																		"key": "Authorization",
+																		"value": "Bearer <token>",
+																		"description": "Added as a part of security scheme: bearer"
+																	}
+																],
+																"url": {
+																	"raw": "{{baseUrl}}/api/users/:user_id/todo/:id?apikey=<string>",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"api",
+																		"users",
+																		":user_id",
+																		"todo",
+																		":id"
+																	],
+																	"query": [
+																		{
+																			"key": "apikey",
+																			"value": "<string>",
+																			"description": "(Required) all api calls require the ?apikey querystring."
+																		}
+																	],
+																	"variable": [
+																		{
+																			"key": "user_id"
+																		},
+																		{
+																			"key": "id"
+																		}
+																	]
+																}
+															},
+															"status": "OK",
+															"code": 200,
+															"_postman_previewlanguage": "text",
+															"header": [],
+															"cookie": [],
+															"body": ""
+														}
+													]
+												}
+											]
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "login",
+							"item": [
+								{
+									"name": "User login ",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"email\": \"<email>\",\n  \"password\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/users/login?apikey=<string>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"users",
+												"login"
+											],
+											"query": [
+												{
+													"key": "apikey",
+													"value": "<string>",
+													"description": "(Required) all api calls require the ?apikey querystring."
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Login request successful",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"email\": \"<email>\",\n  \"password\": \"<string>\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/users/login?apikey=<string>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"users",
+														"login"
+													],
+													"query": [
+														{
+															"key": "apikey",
+															"value": "<string>",
+															"description": "(Required) all api calls require the ?apikey querystring."
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"token\": \"<string>\",\n  \"id\": \"<integer>\",\n  \"name\": \"<string>\",\n  \"email\": \"<string>\",\n  \"enabled\": \"<boolean>\",\n  \"admin\": \"<boolean>\"\n}"
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "logout",
+							"item": [
+								{
+									"name": "User logout",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{bearerToken}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/users/logout?apikey=<string>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"users",
+												"logout"
+											],
+											"query": [
+												{
+													"key": "apikey",
+													"value": "<string>",
+													"description": "(Required) all api calls require the ?apikey querystring."
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Logout successful",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "Bearer <token>",
+														"description": "Added as a part of security scheme: bearer"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/users/logout?apikey=<string>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"users",
+														"logout"
+													],
+													"query": [
+														{
+															"key": "apikey",
+															"value": "<string>",
+															"description": "(Required) all api calls require the ?apikey querystring."
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "register",
+							"item": [
+								{
+									"name": "User registration. There's a max limit of 10 users per developer account.",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"email\": \"<email>\",\n  \"name\": \"<string>\",\n  \"password\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/users/register?apikey=<string>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"users",
+												"register"
+											],
+											"query": [
+												{
+													"key": "apikey",
+													"value": "<string>",
+													"description": "(Required) all api calls require the ?apikey querystring."
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Login request successful",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"email\": \"<email>\",\n  \"name\": \"<string>\",\n  \"password\": \"<string>\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/users/register?apikey=<string>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"users",
+														"register"
+													],
+													"query": [
+														{
+															"key": "apikey",
+															"value": "<string>",
+															"description": "(Required) all api calls require the ?apikey querystring."
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"token\": \"<string>\",\n  \"id\": \"<integer>\",\n  \"name\": \"<string>\",\n  \"email\": \"<string>\",\n  \"enabled\": \"<boolean>\",\n  \"admin\": \"<boolean>\"\n}"
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "{id}",
+							"item": [
+								{
+									"name": "Deletes the current user, or a specific user if current user is admin",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{bearerToken}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/users/:id?apikey=<string>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"users",
+												":id"
+											],
+											"query": [
+												{
+													"key": "apikey",
+													"value": "<string>",
+													"description": "(Required) all api calls require the ?apikey querystring."
+												}
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<number>",
+													"description": "(Required) User Id"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Returns status message.",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "Bearer <token>",
+														"description": "Added as a part of security scheme: bearer"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/users/:id?apikey=<string>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"users",
+														":id"
+													],
+													"query": [
+														{
+															"key": "apikey",
+															"value": "<string>",
+															"description": "(Required) all api calls require the ?apikey querystring."
+														}
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "Lists all users, if the current user has admin rights.",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{bearerToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/users?apikey=<string>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"users"
+									],
+									"query": [
+										{
+											"key": "apikey",
+											"value": "<string>",
+											"description": "(Required) all api calls require the ?apikey querystring."
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Returns list of all users.",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Bearer <token>",
+												"description": "Added as a part of security scheme: bearer"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/users?apikey=<string>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"users"
+											],
+											"query": [
+												{
+													"key": "apikey",
+													"value": "<string>",
+													"description": "(Required) all api calls require the ?apikey querystring."
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Deletes all users, current user must have admin rights.",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{bearerToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/users?apikey=<string>&admin=<boolean>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"users"
+									],
+									"query": [
+										{
+											"key": "apikey",
+											"value": "<string>",
+											"description": "(Required) all api calls require the ?apikey querystring."
+										},
+										{
+											"key": "admin",
+											"value": "<boolean>",
+											"description": "?admin=true if you want to also delete the admin account (not developer account)"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Returns status message.",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Bearer <token>",
+												"description": "Added as a part of security scheme: bearer"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/users?apikey=<string>&admin=<boolean>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"users"
+											],
+											"query": [
+												{
+													"key": "apikey",
+													"value": "<string>",
+													"description": "(Required) all api calls require the ?apikey querystring."
+												},
+												{
+													"key": "admin",
+													"value": "<boolean>",
+													"description": "?admin=true if you want to also delete the admin account (not developer account)"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "todo",
+					"item": [
+						{
+							"name": "{id}",
+							"item": [
+								{
+									"name": "Deletes the todo.",
+									"request": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/todo/:id?apikey=<string>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"todo",
+												":id"
+											],
+											"query": [
+												{
+													"key": "apikey",
+													"value": "<string>",
+													"description": "(Required) all api calls require the ?apikey querystring."
+												}
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<number>",
+													"description": "(Required) Todo ID"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Returns a message",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/todo/:id?apikey=<string>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"todo",
+														":id"
+													],
+													"query": [
+														{
+															"key": "apikey",
+															"value": "<string>",
+															"description": "(Required) all api calls require the ?apikey querystring."
+														}
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "https://todos.simpleapi.dev"
+		}
+	]
+}
