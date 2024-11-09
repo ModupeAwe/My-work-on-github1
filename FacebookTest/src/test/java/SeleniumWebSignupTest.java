@@ -16,6 +16,13 @@ public class SeleniumWebSignupTest {
         driver.findElement(By.id("user_password")).sendKeys("Dudu_1");
         driver.findElement(By.id("submit")).click();
         Thread.sleep(5000);
+        driver.findElement(By.xpath("/html/body/div[2]/div[1]/ul/div/div/li[1]/a")).click();
+        driver.findElement(By.xpath("/html/body/div[2]/div[2]/div/div/div[1]/a")).click();
+        driver.findElement(By.xpath("//*[@id=\"bs-example-navbar-collapse-1\"]/ul/li[3]/a")).click();
+        driver.quit();
+        
+
+
 
 
 
