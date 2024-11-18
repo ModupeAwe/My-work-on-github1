@@ -38,10 +38,10 @@ public void testValidLogin() throws InterruptedException {
 Thread.sleep(5000);
         // Enter valid credentials
         WebElement emailField = driver.findElement(By.id("username"));
-        emailField.sendKeys("dupsleen@gmail.com");
+        emailField.sendKeys("");
     Thread.sleep(5000);
         WebElement passwordField = driver.findElement(By.id("password"));
-        passwordField.sendKeys("Flourish_1");
+        passwordField.sendKeys("");
     Thread.sleep(5000);
         // Click the login button
         driver.findElement(By.xpath("/html/body/div[1]/div/section/div[4]/section/section/aside/div[2]/div/form/div[3]/button")).click();
@@ -102,6 +102,27 @@ Thread.sleep(5000);
         System.out.println("Account created successfully"); */
     }
 
+    @Test(priority=5)
+    public void clickSelectAddress() throws InterruptedException {
+        //click My cart add address
+        driver.findElement(By.xpath("/html/body/div[1]/div/section/div[2]/nav/div[2]/div[1]/div/div/a[2]/span[1]")).click();
+        Thread.sleep(5000);
+        //click continue to check out
+        driver.findElement(By.xpath("/html/body/div[1]/div/section/div[3]/section/main/div/div[2]/div[4]/div/div[6]/div/a")).click();
+        Thread.sleep(5000);
+        //click Add Delivery Address
+        driver.findElement(By.xpath("/html/body/div[1]/div/section/div[2]/section/main/div/form/div/div[1]/section[1]/div/div/div[2]/div[1]/div[2]/div[1]/div/button")).click();
+        Thread.sleep(5000);
+    }
+
+    /*@Test(priority = 6)
+    public void logoutSuccessfully() throws InterruptedException {
+        // click on My Account Logout
+        driver.findElement(By.xpath("/html/body/div[1]/div/section/div[2]/nav/div[2]/div[1]/div/div/div[4]/div/a/span")).click();
+        Thread.sleep(5000);
+        // click on logout
+        driver.findElement(By.xpath("/html/body/div[1]/div/section/div[2]/nav/div[2]/div[1]/div/div/div[4]/div/ul/li[7]/a")).click();
+        Thread.sleep(5000); */
 
 
     @AfterTest
